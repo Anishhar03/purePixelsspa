@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { 
@@ -119,7 +119,7 @@ function App() {
       >
         <a href="/" className="flex items-center space-x-3">
           <motion.img
-            src="photos/logo.png"
+            src="/photos/logo.png"
             alt="PurePixels"
             className="h-16 w-auto transition-transform duration-300 ease-in-out hover:scale-110"
           />
@@ -459,7 +459,7 @@ function App() {
               >
                 <div className="relative">
                 <motion.img 
-      src="photos/logo.png" 
+      src="/photos/logo.png" 
       alt="PurePixels" 
       className="h-14 w-auto transition-transform duration-300 ease-in-out hover:scale-110"
     />
