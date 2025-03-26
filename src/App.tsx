@@ -14,7 +14,6 @@ import {
   ArrowRight,
   Menu,
   X,
-  Hexagon,
   Globe,
   Zap,
   Award
@@ -67,10 +66,10 @@ function App() {
     { icon: <Users className="w-8 h-8 text-blue-500" />, number: '50+', label: 'Expert Team' }
   ];
 
-  const navVariants = {
-    hidden: { y: -100, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
-  };
+  // const navVariants = {
+  //   hidden: { y: -100, opacity: 0 },
+  //   visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
+  // };
 
   const fadeInUp = {
     hidden: { y: 60, opacity: 0 },
@@ -101,53 +100,45 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Navigation */}
-      <motion.nav 
-        className={`fixed w-full z-50 transition-all duration-300 ${
-          scrollY > 50 ? 'bg-white/90 backdrop-blur-sm shadow-md' : 'bg-transparent'
-        }`}
+      <motion.nav
+        className={`fixed w-full z-50 transition-all duration-300 ${scrollY > 50 ? 'bg-white/90 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}
         initial="hidden"
         animate="visible"
-        variants={navVariants}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
+            {/* Logo Section */}
             <motion.div 
-              className="flex items-center space-x-2"
-              variants={logoVariants}
-              initial="initial"
-              whileHover="hover"
-            >
-              <div className="relative">
-                <Hexagon className="h-10 w-10 text-blue-600" />
-                <motion.div
-                  className="absolute inset-0 bg-blue-400 rounded-full mix-blend-multiply"
-                  animate={{
-                    opacity: [0, 0.5, 0],
-                    scale: [1, 1.2, 1],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-bold text-gray-900 leading-none">PurePixels</span>
-                <span className="text-xs text-blue-600 font-medium">Digital Solutions</span>
-              </div>
-            </motion.div>
-            
+  className="flex items-center space-x-4"
+  initial={{ opacity: 0, scale: 0.9 }} 
+  animate={{ opacity: 1, scale: 1 }} 
+  whileHover={{ scale: 1.05 }}
+  transition={{ duration: 0.3, ease: "easeInOut" }}
+>
+  <a href="/" className="flex items-center space-x-3">
+    <motion.img 
+      src="src/photos/logo.png" 
+      alt="PurePixels" 
+      className="h-14 w-auto transition-transform duration-300 ease-in-out hover:scale-110"
+    />
+    <div className="flex flex-col leading-tight">
+    <div className="flex flex-col">
+                  <span className="text-xl font-bold leading-none">PurePixels</span>
+                  <span className="text-xs text-blue-400 font-medium">Digital Solutions</span>
+                </div>
+    </div>
+  </a>
+</motion.div>
+
+
+
+            {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
               {['home', 'services', 'about', 'contact'].map((item) => (
                 <motion.a
                   key={item}
                   href={`#${item}`}
-                  className={`${
-                    activeSection === item
-                      ? 'text-blue-600 border-b-2 border-blue-600'
-                      : 'text-gray-600 hover:text-blue-600'
-                  } capitalize transition-colors duration-200`}
+                  className={`capitalize transition-colors duration-200 ${activeSection === item ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-blue-600'}`}
                   whileHover={{ y: -2 }}
                   whileTap={{ y: 0 }}
                 >
@@ -156,18 +147,14 @@ function App() {
               ))}
             </div>
 
-            <motion.button
-              className="md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
+            {/* Mobile Menu Button */}
+            <motion.button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </motion.button>
           </div>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile Menu */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -194,7 +181,6 @@ function App() {
           )}
         </AnimatePresence>
       </motion.nav>
-
       {/* Hero Section */}
       <motion.section 
         id="home" 
@@ -462,19 +448,11 @@ function App() {
                 whileHover="hover"
               >
                 <div className="relative">
-                  <Hexagon className="h-10 w-10 text-blue-400" />
-                  <motion.div
-                    className="absolute inset-0 bg-blue-300 rounded-full mix-blend-multiply"
-                    animate={{
-                      opacity: [0, 0.5, 0],
-                      scale: [1, 1.2, 1],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                  />
+                <motion.img 
+      src="src/photos/logo.png" 
+      alt="PurePixels" 
+      className="h-14 w-auto transition-transform duration-300 ease-in-out hover:scale-110"
+    />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xl font-bold leading-none">PurePixels</span>
