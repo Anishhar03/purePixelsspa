@@ -464,10 +464,10 @@ function App() {
       className="h-14 w-auto transition-transform duration-300 ease-in-out hover:scale-110"
     />
                 </div>
-                <div className="flex flex-col">
+                {/* <div className="flex flex-col">
                   <span className="text-xl font-bold leading-none">PurePixels</span>
                   <span className="text-xs text-blue-400 font-medium">Digital Solutions</span>
-                </div>
+                </div> */}
               </motion.div>
               <p className="text-gray-400">
                 Transforming businesses through innovative technology solutions.
