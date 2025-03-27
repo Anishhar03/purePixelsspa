@@ -124,10 +124,10 @@ function App() {
             className="h-16 w-auto transition-transform duration-300 ease-in-out hover:scale-110"
           />
           <div className="flex flex-col leading-tight">
-            <span className="text-xl font-bold leading-none">PurePixels</span>
+            {/* <span className="text-xl font-bold leading-none">PurePixels</span>
             <span className="text-xs text-blue-400 font-medium">
               Digital Solutions
-            </span>
+            </span> */}
           </div>
         </a>
       </motion.div>
