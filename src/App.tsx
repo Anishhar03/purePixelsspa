@@ -518,8 +518,9 @@ function App() {
             >
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <ul className="space-y-2 text-gray-400">
-                <motion.li whileHover={{ x: 5 }}>contact@purepixels.com</motion.li>
-                <motion.li whileHover={{ x: 5 }}>+1 (555) 123-4567</motion.li>
+                <motion.li whileHover={{ x: 5 }}>Info@purepixeltechnologies.com</motion.li>
+                <motion.li whileHover={{ x: 5 }}>T.Kaushal@purepixeltechnologies.com</motion.li>
+                <motion.li whileHover={{ x: 5 }}>79030041257</motion.li>
                 <motion.li whileHover={{ x: 5 }}>123 Tech Street, Digital City</motion.li>
               </ul>
             </motion.div>
