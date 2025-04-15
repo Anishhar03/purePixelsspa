@@ -521,7 +521,12 @@ function App() {
                 <motion.li whileHover={{ x: 5 }}>Info@purepixeltechnologies.com</motion.li>
                 <motion.li whileHover={{ x: 5 }}>T.Kaushal@purepixeltechnologies.com</motion.li>
                 <motion.li whileHover={{ x: 5 }}>79030041257</motion.li>
-                <motion.li whileHover={{ x: 5 }}>123 Tech Street, Digital City</motion.li>
+                <motion.li whileHover={{ x: 5 }}>Address -
+                      Purepixel Technologies Pvt Ltd
+                       Jugal Hari Enclave 
+                        3rd Floor , Karamtoli, Ranchi
+                          834008
+                </motion.li>
               </ul>
             </motion.div>
           </div>
@@ -531,7 +536,7 @@ function App() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <p>&copy; {new Date().getFullYear()} PurePixels. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} PurePixel. All rights reserved.</p>
           </motion.div>
         </div>
       </footer>
