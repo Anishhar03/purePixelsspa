@@ -66,11 +66,6 @@ function App() {
     { icon: <Users className="w-8 h-8 text-blue-500" />, number: '50+', label: 'Expert Team' }
   ];
 
-  // const navVariants = {
-  //   hidden: { y: -100, opacity: 0 },
-  //   visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
-  // };
-
   const fadeInUp = {
     hidden: { y: 60, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { duration: 0.6 } }
@@ -101,95 +96,95 @@ function App() {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Navigation */}
       <motion.nav
-  className={fixed w-full z-50 transition-all duration-300 ${
-    scrollY > 50 ? "bg-white/90 backdrop-blur-sm shadow-md" : "bg-transparent"
-  }}
-  initial="hidden"
-  animate="visible"
->
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="flex justify-between h-20 items-center">
-      {/* Logo Section */}
-      <motion.div
-        className="flex items-center space-x-4"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className={`fixed w-full z-50 transition-all duration-300 ${
+          scrollY > 50 ? "bg-white/90 backdrop-blur-sm shadow-md" : "bg-transparent"
+        }`}
+        initial="hidden"
+        animate="visible"
       >
-        <a href="/" className="flex items-center space-x-3">
-          <motion.img
-            src="/photos/logo.png"
-            alt="PurePixels"
-            className="h-16 w-auto transition-transform duration-300 ease-in-out hover:scale-110"
-          />
-          <div className="flex flex-col leading-tight">
-            {/* <span className="text-xl font-bold leading-none">PurePixels</span>
-            <span className="text-xs text-blue-400 font-medium">
-              Digital Solutions
-            </span> */}
-          </div>
-        </a>
-      </motion.div>
-
-      {/* Desktop Navigation */}
-      <div className="hidden md:flex space-x-8">
-        {["home", "services", "about", "contact"].map((item) => (
-          <motion.a
-            key={item}
-            href={#${item}}
-            className={capitalize transition-colors duration-200 ${
-              activeSection === item
-                ? "text-blue-600 border-b-2 border-blue-600"
-                : "text-gray-600 hover:text-blue-600"
-            }}
-            whileHover={{ y: -2 }}
-            whileTap={{ y: 0 }}
-          >
-            {item}
-          </motion.a>
-        ))}
-      </div>
-
-      {/* Mobile Menu Button */}
-      <motion.button
-        className="md:hidden"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-      </motion.button>
-    </div>
-  </div>
-
-  {/* Mobile Menu */}
-  <AnimatePresence>
-    {isMenuOpen && (
-      <motion.div
-        className="md:hidden"
-        initial={{ opacity: 0, height: 0 }}
-        animate={{ opacity: 1, height: "auto" }}
-        exit={{ opacity: 0, height: 0 }}
-        transition={{ duration: 0.3 }}
-      >
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
-          {["home", "services", "about", "contact"].map((item) => (
-            <motion.a
-              key={item}
-              href={#${item}}
-              className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-blue-600 capitalize"
-              onClick={() => setIsMenuOpen(false)}
-              whileHover={{ x: 10 }}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-20 items-center">
+            {/* Logo Section */}
+            <motion.div
+              className="flex items-center space-x-4"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              {item}
-            </motion.a>
-          ))}
+              <a href="/" className="flex items-center space-x-3">
+                <motion.img
+                  src="/photos/logo.png"
+                  alt="PurePixels"
+                  className="h-16 w-auto transition-transform duration-300 ease-in-out hover:scale-110"
+                />
+                <div className="flex flex-col leading-tight">
+                  {/* <span className="text-xl font-bold leading-none">PurePixels</span>
+                  <span className="text-xs text-blue-400 font-medium">
+                    Digital Solutions
+                  </span> */}
+                </div>
+              </a>
+            </motion.div>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-8">
+              {["home", "services", "about", "contact"].map((item) => (
+                <motion.a
+                  key={item}
+                  href={`#${item}`}
+                  className={`capitalize transition-colors duration-200 ${
+                    activeSection === item
+                      ? "text-blue-600 border-b-2 border-blue-600"
+                      : "text-gray-600 hover:text-blue-600"
+                  }`}
+                  whileHover={{ y: -2 }}
+                  whileTap={{ y: 0 }}
+                >
+                  {item}
+                </motion.a>
+              ))}
+            </div>
+
+            {/* Mobile Menu Button */}
+            <motion.button
+              className="md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </motion.button>
+          </div>
         </div>
-      </motion.div>
-    )}
-  </AnimatePresence>
-</motion.nav>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              className="md:hidden"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
+                {["home", "services", "about", "contact"].map((item) => (
+                  <motion.a
+                    key={item}
+                    href={`#${item}`}
+                    className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-blue-600 capitalize"
+                    onClick={() => setIsMenuOpen(false)}
+                    whileHover={{ x: 10 }}
+                  >
+                    {item}
+                  </motion.a>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.nav>
 
       {/* Hero Section */}
       <motion.section 
@@ -458,16 +453,12 @@ function App() {
                 whileHover="hover"
               >
                 <div className="relative">
-                <motion.img 
-      src="/photos/logo.png" 
-      alt="PurePixels" 
-      className="h-14 w-auto transition-transform duration-300 ease-in-out hover:scale-110"
-    />
+                  <motion.img 
+                    src="/photos/logo.png" 
+                    alt="PurePixels" 
+                    className="h-14 w-auto transition-transform duration-300 ease-in-out hover:scale-110"
+                  />
                 </div>
-                {/* <div className="flex flex-col">
-                  <span className="text-xl font-bold leading-none">PurePixels</span>
-                  <span className="text-xs text-blue-400 font-medium">Digital Solutions</span>
-                </div> */}
               </motion.div>
               <p className="text-gray-400">
                 Transforming businesses through innovative technology solutions.
@@ -485,7 +476,7 @@ function App() {
                     key={item}
                     whileHover={{ x: 5 }}
                   >
-                    <a href={#${item.toLowerCase()}} className="text-gray-400 hover:text-white transition-colors duration-200">
+                    <a href={`#${item.toLowerCase()}`} className="text-gray-400 hover:text-white transition-colors duration-200">
                       {item}
                     </a>
                   </motion.li>
@@ -524,7 +515,7 @@ function App() {
                 <motion.li whileHover={{ x: 5 }}>Address -
                       Purepixel Technologies Pvt Ltd
                        Jugal Hari Enclave 
-                        3rd Floor , Karamtoli, Ranchi
+                        3rd Floor , Karamtoli, Ranchi
                           834008
                 </motion.li>
               </ul>
@@ -543,3 +534,5 @@ function App() {
     </div>
   );
 }
+
+export default App;
