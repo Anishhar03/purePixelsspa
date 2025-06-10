@@ -59,12 +59,29 @@ function App() {
     { icon: <Monitor className="w-12 h-12" />, title: 'IT Consulting', description: 'Strategic technology consulting and planning' }
   ];
 
-  const stats = [
-    { icon: <Globe className="w-8 h-8 text-blue-500" />, number: '150+', label: 'Clients Worldwide' },
-    { icon: <Zap className="w-8 h-8 text-blue-500" />, number: '200+', label: 'Projects Completed' },
-    { icon: <Award className="w-8 h-8 text-blue-500" />, number: '15+', label: 'Years Experience' },
-    { icon: <Users className="w-8 h-8 text-blue-500" />, number: '50+', label: 'Expert Team' }
-  ];
+ const stats = [
+  {
+    icon: <Globe className="w-8 h-8 text-indigo-600" />,
+    number: '20+',
+    label: 'Countries Served',
+  },
+  {
+    icon: <Zap className="w-8 h-8 text-indigo-600" />,
+    number: '120+',
+    label: 'Custom Solutions Delivered',
+  },
+  {
+    icon: <Award className="w-8 h-8 text-indigo-600" />,
+    number: '5+',
+    label: 'Years of Innovation',
+  },
+  {
+    icon: <Users className="w-8 h-8 text-indigo-600" />,
+    number: '30+',
+    label: 'Tech Experts Onboard',
+  },
+];
+
 
   const fadeInUp = {
     hidden: { y: 60, opacity: 0 },
