@@ -61,29 +61,29 @@ function App() {
     { icon: <Brain className="w-12 h-12" />, title: 'AI & Machine Learning', description: 'Intelligent solutions for business automation' },
     { icon: <Monitor className="w-12 h-12" />, title: 'IT Consulting', description: 'Strategic technology consulting and planning' }
   ];
-
 const stats = [
   {
-    icon: <Building2 className="w-8 h-8 text-indigo-600" />,
-    name: 'Cisco',
-    number: 'A global leader in networking and cybersecurity solutions, enabling secure and scalable connectivity across the globe.',
+    icon: <img src="/photos/cisco.png" alt="Cisco Logo" className="h-8 w-auto" />, 
+    number: 'Cisco',
+    name: 'A global leader in networking and cybersecurity solutions, enabling secure and scalable connectivity across the globe.',
   },
   {
-    icon: <Server className="w-8 h-8 text-indigo-600" />,
-    name: 'Dell Technologies',
-    number: 'Renowned for its innovative computing solutions, Dell empowers businesses with cutting-edge infrastructure and data technologies.',
+    icon: <img src="/photos/dell.png" alt="Dell Technologies Logo" className="h-8 w-auto" />,
+    number: 'Dell Technologies',
+    name: 'Renowned for its innovative computing solutions, Dell empowers businesses with cutting-edge infrastructure and data technologies.',
   },
   {
-    icon: <Network className="w-8 h-8 text-indigo-600" />,
-    name: 'NetApp',
-    number: 'A pioneer in cloud data services and storage solutions, helping organizations unlock the full potential of their data.',
+    icon: <img src="/photos/netapp.png" alt="NetApp Logo" className="h-8 w-auto" />,
+    number: 'NetApp',
+    name: 'A pioneer in cloud data services and storage solutions, helping organizations unlock the full potential of their data.',
   },
   {
-    icon: <Cpu className="w-8 h-8 text-indigo-600" />,
-    name: 'HPE',
-    number: 'Hewlett Packard Enterprise delivers intelligent edge-to-cloud solutions that drive business transformation and innovation.',
+    icon: <img src="/photos/hpe.png" alt="HPE Logo" className="h-8 w-auto" />,
+    number: 'HPE',
+    name: 'Hewlett Packard Enterprise delivers intelligent edge-to-cloud solutions that drive business transformation and innovation.',
   },
 ];
+
 
 
 
