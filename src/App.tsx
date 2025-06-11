@@ -384,7 +384,7 @@ const stats = [
                     {stat.number}
                   </motion.div>
                   <motion.div 
-                    className="text-gray-600"
+                    className="text-black"
                     initial={{ opacity: 0 }}
                     animate={statsInView ? { opacity: 1 } : { opacity: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 + 0.4 }}
