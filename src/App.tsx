@@ -356,46 +356,38 @@ const stats = [
                 ))}
               </div>
             </motion.div>
-            <motion.div 
-              className="grid grid-cols-2 gap-4"
-              ref={statsRef}
-              variants={staggerContainer}
-            >
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300"
-                  variants={fadeInUp}
-                >
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    animate={statsInView ? { scale: 1 } : { scale: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    {stat.icon}
-                  </motion.div>
-                  <motion.div 
-                    className="text-3xl font-bold text-blue-600 mb-2"
-                    initial={{ opacity: 0 }}
-                    animate={statsInView ? { opacity: 1 } : { opacity: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-                  >
-                    {stat.number}
-                  </motion.div>
-                  <motion.div 
-                    className="text-gray-600"
-                    initial={{ opacity: 0 }}
-                    animate={statsInView ? { opacity: 1 } : { opacity: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 + 0.4 }}
-                  >
-                    {stat.label}
-                  </motion.div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </motion.section>
+           <motion.div
+  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 px-4 sm:px-8 md:px-12"
+  ref={statsRef}
+  variants={staggerContainer}
+>
+  {stats.map((stat, index) => (
+    <motion.div
+      key={index}
+      className="bg-gradient-to-br from-white to-gray-50 border border-gray-200 p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 group"
+      variants={fadeInUp}
+    >
+      <motion.div
+        className="text-xl font-semibold text-indigo-700 group-hover:text-indigo-900"
+        initial={{ opacity: 0, y: 10 }}
+        animate={statsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+      >
+        {stat.name}
+      </motion.div>
+
+      <motion.div
+        className="text-sm text-gray-600 mt-4 leading-relaxed"
+        initial={{ opacity: 0 }}
+        animate={statsInView ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
+      >
+        {stat.number}
+      </motion.div>
+    </motion.div>
+  ))}
+</motion.div>
+
 
       {/* Contact Section */}
       <motion.section 
