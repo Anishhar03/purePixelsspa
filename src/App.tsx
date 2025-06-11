@@ -376,7 +376,7 @@ const stats = [
                     {stat.icon}
                   </motion.div>
                   <motion.div 
-                    className="text-3xl font-bold text-blue-600 mb-2"
+                    className="text-3xl font-bold text-black mb-2"
                     initial={{ opacity: 0 }}
                     animate={statsInView ? { opacity: 1 } : { opacity: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
