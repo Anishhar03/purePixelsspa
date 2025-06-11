@@ -528,7 +528,6 @@ function App() {
               <ul className="space-y-2 text-gray-400">
                 <motion.li whileHover={{ x: 5 }}>Info@purepixeltechnologies.com</motion.li>
                 <motion.li whileHover={{ x: 5 }}>sales@purepixeltechnologies.com</motion.li>
-                <motion.li whileHover={{ x: 5 }}>79030041257</motion.li>
                 <motion.li whileHover={{ x: 5 }}>Address -
                       Purepixel Technologies Pvt Ltd
                        Jugal Hari Enclave 
