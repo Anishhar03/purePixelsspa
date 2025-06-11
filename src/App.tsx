@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+
+
+ import { Building2, Server, Network, Cpu } from 'lucide-react';
 import { 
   Monitor, 
   Code2, 
@@ -59,28 +62,29 @@ function App() {
     { icon: <Monitor className="w-12 h-12" />, title: 'IT Consulting', description: 'Strategic technology consulting and planning' }
   ];
 
- const stats = [
+const stats = [
   {
-    icon: <Globe className="w-8 h-8 text-indigo-600" />,
-    number: '20+',
-    label: 'Countries Served',
+    icon: <Building2 className="w-8 h-8 text-indigo-600" />,
+    name: 'Cisco',
+    number: 'A global leader in networking and cybersecurity solutions, enabling secure and scalable connectivity across the globe.',
   },
   {
-    icon: <Zap className="w-8 h-8 text-indigo-600" />,
-    number: '120+',
-    label: 'Custom Solutions Delivered',
+    icon: <Server className="w-8 h-8 text-indigo-600" />,
+    name: 'Dell Technologies',
+    number: 'Renowned for its innovative computing solutions, Dell empowers businesses with cutting-edge infrastructure and data technologies.',
   },
   {
-    icon: <Award className="w-8 h-8 text-indigo-600" />,
-    number: '5+',
-    label: 'Years of Innovation',
+    icon: <Network className="w-8 h-8 text-indigo-600" />,
+    name: 'NetApp',
+    number: 'A pioneer in cloud data services and storage solutions, helping organizations unlock the full potential of their data.',
   },
   {
-    icon: <Users className="w-8 h-8 text-indigo-600" />,
-    number: '30+',
-    label: 'Tech Experts Onboard',
+    icon: <Cpu className="w-8 h-8 text-indigo-600" />,
+    name: 'HPE',
+    number: 'Hewlett Packard Enterprise delivers intelligent edge-to-cloud solutions that drive business transformation and innovation.',
   },
 ];
+
 
 
   const fadeInUp = {
