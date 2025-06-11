@@ -78,7 +78,7 @@ const stats = [
     name: 'A pioneer in cloud data services and storage solutions, helping organizations unlock the full potential of their data.',
   },
   {
-    icon: <img src="/photos/hpe.png" alt="HPE Logo" className="h-8 w-auto" />,
+    icon: <img src="/photos/hp.png" alt="HPE Logo" className="h-8 w-auto" />,
     number: 'HPE',
     name: 'Hewlett Packard Enterprise delivers intelligent edge-to-cloud solutions that drive business transformation and innovation.',
   },
