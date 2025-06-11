@@ -63,26 +63,27 @@ function App() {
   ];
 const stats = [
   {
-    icon: <img src="/photos/cisco.png" alt="Cisco Logo" className="h-8 w-auto" />, 
-    number: 'Cisco',
+    icon: <img src="/photos/cisco.png" alt="Cisco Logo" className="h-8 w-auto" />,
+    number: 'Global networking & cybersecurity leader',
     name: 'A global leader in networking and cybersecurity solutions, enabling secure and scalable connectivity across the globe.',
   },
   {
     icon: <img src="/photos/dell.png" alt="Dell Technologies Logo" className="h-8 w-auto" />,
-    number: 'Dell Technologies',
+    number: 'Innovative computing & IT infrastructure',
     name: 'Renowned for its innovative computing solutions, Dell empowers businesses with cutting-edge infrastructure and data technologies.',
   },
   {
     icon: <img src="/photos/netapp.png" alt="NetApp Logo" className="h-8 w-auto" />,
-    number: 'NetApp',
+    number: 'Cloud data & storage solutions provider',
     name: 'A pioneer in cloud data services and storage solutions, helping organizations unlock the full potential of their data.',
   },
   {
     icon: <img src="/photos/hp.png" alt="HPE Logo" className="h-8 w-auto" />,
-    number: 'HPE',
+    number: 'Edge-to-cloud enterprise technology',
     name: 'Hewlett Packard Enterprise delivers intelligent edge-to-cloud solutions that drive business transformation and innovation.',
   },
 ];
+
 
 
 
