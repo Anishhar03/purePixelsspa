@@ -68,11 +68,6 @@ const stats = [
     name: 'A global leader in networking and cybersecurity solutions, enabling secure and scalable connectivity across the globe.',
   },
   {
-    icon: <img src="/photos/netapp.png" alt="NetApp Logo" className="h-8 w-auto" />,
-    number: 'Cloud data & storage solutions provider',
-    name: 'A pioneer in cloud data services and storage solutions, helping organizations unlock the full potential of their data.',
-  },
-  {
     icon: <img src="/photos/hp.png" alt="HPE Logo" className="h-8 w-auto" />,
     number: 'Edge-to-cloud enterprise technology',
     name: 'Hewlett Packard Enterprise delivers intelligent edge-to-cloud solutions that drive business transformation and innovation.',
