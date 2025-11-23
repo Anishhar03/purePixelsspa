@@ -68,11 +68,6 @@ const stats = [
     name: 'A global leader in networking and cybersecurity solutions, enabling secure and scalable connectivity across the globe.',
   },
   {
-    icon: <img src="/photos/dell.png" alt="Dell Technologies Logo" className="h-8 w-auto" />,
-    number: 'Innovative computing & IT infrastructure',
-    name: 'Renowned for its innovative computing solutions, Dell empowers businesses with cutting-edge infrastructure and data technologies.',
-  },
-  {
     icon: <img src="/photos/netapp.png" alt="NetApp Logo" className="h-8 w-auto" />,
     number: 'Cloud data & storage solutions provider',
     name: 'A pioneer in cloud data services and storage solutions, helping organizations unlock the full potential of their data.',
@@ -525,22 +520,23 @@ const stats = [
               </ul>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <h3 className="text-lg font-semibold mb-4">Contact</h3>
-              <ul className="space-y-2 text-gray-400">
-                <motion.li whileHover={{ x: 5 }}>Info@purepixeltechnologies.com</motion.li>
-                <motion.li whileHover={{ x: 5 }}>sales@purepixeltechnologies.com</motion.li>
-                <motion.li whileHover={{ x: 5 }}>Address -
-                      Purepixel Technologies Pvt Ltd
-                       Jugal Hari Enclave 
-                        3rd Floor , Karamtoli, Ranchi
-                          834008
-                </motion.li>
-              </ul>
-            </motion.div>
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.3 }}
+>
+  <h3 className="text-lg font-semibold mb-4">Contact</h3>
+  <ul className="space-y-2 text-gray-400">
+    <motion.li whileHover={{ x: 5 }}>Info@purepixeltechnologies.com</motion.li>
+    <motion.li whileHover={{ x: 5 }}>sales@purepixeltechnologies.com</motion.li>
+    <motion.li whileHover={{ x: 5 }}>
+      Corporate Address - 3rd Floor, 88 Netaji Colony, Baranagar, Kolkata - 700090
+    </motion.li>
+    <motion.li whileHover={{ x: 5 }}>
+      Registered Address - Purepixel Technologies Pvt Ltd, Jugal Hari Enclave, 3rd Floor, Karamtoli, Ranchi, 834008
+    </motion.li>
+  </ul>
+</motion.div>
+
           </div>
           <motion.div 
             className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
